@@ -112,7 +112,7 @@ const Page = () => {
         moneyGiven,
         moneyReceived,
         person: selectedPerson,
-        bank: selectedBank || '', // Bank is optional, will default to an empty string if not selected
+        bank: selectedBank || '', 
         paymentMethod: selectedPaymentMethod,
         date: new Date().toISOString(),
       };
@@ -329,6 +329,7 @@ const Page = () => {
   );
 };
 
+// Define styles with media queries for responsiveness
 const styles = {
   page: {
     textAlign: 'center',
@@ -411,6 +412,7 @@ const styles = {
   },
 };
 
+// Modal styles
 const modalStyles = {
   content: {
     top: '50%',
@@ -425,5 +427,24 @@ const modalStyles = {
     maxHeight: "600px",
   },
 };
+
+// Responsive styles
+const responsiveStyles = `
+@media (max-width: 600px) {
+  .input {
+    font-size: 14px;
+    width: 100%;
+  }
+  .button {
+    padding: 8px 16px;
+  }
+  .transactionTable {
+    font-size: 12px;
+  }
+  .transactionTableTh, .transactionTableTd {
+    padding: 8px;
+  }
+}
+`;
 
 export default Page;

@@ -9,7 +9,7 @@ const Page = () => {
   useEffect(() => {
     setTimeout(() => {
       router.push("first")
-    }, 3000);
+    }, 5000);
   }, [router])  // Adding router to the dependency array to avoid missing updates
   
   return (
